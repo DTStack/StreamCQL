@@ -34,6 +34,10 @@ import com.huawei.streaming.cql.semanticanalyzer.parser.context.ShowApplications
 import com.huawei.streaming.cql.semanticanalyzer.parser.context.ShowFunctionsContext;
 import com.huawei.streaming.cql.semanticanalyzer.parser.context.SubmitApplicationContext;
 
+import java.math.BigDecimal;
+import java.sql.Date;
+import java.sql.Time;
+import java.sql.Timestamp;
 /**
  * CQL的一些公共方法
  * 
@@ -53,7 +57,11 @@ public class CQLUtils
         nonChangeableCommonds.add(ExplainStatementContext.class);
         nonChangeableCommonds.add(SubmitApplicationContext.class);
     }
-    
+
+    private static final int[] multiplier = new int[] {1000, 100, 10, 1};
+
+
+
     /**
      * 从文件中读取cql语句
      */
@@ -98,8 +106,6 @@ public class CQLUtils
         }
         return classLoader;
     }
-
-    private static final int[] multiplier = new int[] {1000, 100, 10, 1};
 
     /**
      * 转义字符处理
