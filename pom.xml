@@ -37,6 +37,7 @@
         <module>adapter/storm</module>
         <module>adapter/storm-0.10</module>
         <module>adapter/jstorm</module>
+        <module>adapter/stream-flink</module>
         <module>cql</module>
         <module>cql-binary/storm</module>
         <module>cql-binary/storm-0.10</module>
